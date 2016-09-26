@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+
+@model PagedList.IPagedList<Integration.Models.Person>
+@using PagedList.Mvc;
+
+
+<h2>Persons</h2>
+<div class="form-group pull-right table_view_count">
+    <select class="form-control pull-right" id="view_count">
+        @for (var i=2;i<=10;i+=2)
+        {
+            var selected="";
+            if (ViewBag.view_count == i){ selected = "selected"; }
+            <option value="@i" @(selected)>@i</option>
+        }
+    </select>
+    <label for="view_count" class="pull-right">Count:</label>
+</div>
+
+
+<table class="table table-striped table-bordered">
+    @{
+        string sort_by = ViewBag.order_by;
+        string sort_type = ViewBag.order_type;
+        var sort_type_for1 = "1";
+        var sort_type_for2 = "1";
+        var sort_type_for3 = "1";
+
+        var sorting_class1 = "";
+        var sorting_class2 = "";
+        var sorting_class3 = "";
+        var sort_type_class1="";
+        var sort_type_class2="";
+        var sort_type_class3="";
+        switch (sort_by)
+        {
+            case "1": sort_type_for1 = (sort_type=="0") ?"1":"0";
+                sorting_class1 = "current_sorting";
+                sort_type_class1 = (sort_type == "0") ? "sort_type0" : "sort_type1";
+                break;
+            case "2": sort_type_for2 = (sort_type=="0") ?"1":"0";
+                sorting_class2 = "current_sorting";
+                sort_type_class2 = (sort_type == "0") ? "sort_type0" : "sort_type1";
+                break;
+            case "3": sort_type_for3 = (sort_type=="0") ?"1":"0";
+                sorting_class3 = "current_sorting";
+                sort_type_class3 = (sort_type == "0") ? "sort_type0" : "sort_type1";
+                break;
+            default: sorting_class1 = "current_sorting";
+                    sort_type_class1 = "sort_type0"; break;
+
+        }
+            }
+    <thead>
+        <tr>
+            <th class="@sorting_class1" width="50">
+                <a href="1/@sort_type_for1" class="@sort_type_class1">ID</a>
+            </th>
+            <th class="@sorting_class2">
+                <a href="2/@sort_type_for2" class="@sort_type_class2">First Name</a>
+            </th>
+            <th class="@sorting_class3">
+                <a href="3/@sort_type_for3" class="@sort_type_class3">Last Name</a>
+            </th>
+            <th>View Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td class="@sorting_class1">
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td class="@sorting_class2">
+                    @Html.DisplayFor(modelItem => item.first_name)
+                </td>
+                <td class="@sorting_class3">
+                    @Html.DisplayFor(modelItem => item.last_name)
+                </td>
+
+                <td><a href=" @Html.DisplayFor(modelItem => item.id)" data-toggle="modal" data-target="#person_details_modal" class="view_details">View Details</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page =>"/"+page)

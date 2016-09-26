@@ -1,0 +1,33 @@
+#person_details_modal .modal-dialog
+{
+    margin:50px auto;
+    width: 400px;
+}
+
+
+.table tbody tr:hover td {
+    background-color: #E0E0E0;
+}
+
+.table .sorting_1 {
+    background-color: #ECEFF1;
+}
+
+.table .sorting_asc,
+.table .sorting_desc {
+    background-color: #E7E7E7;
+}
+
+
+.table_view_count {
+    width: 150px;
+}
+.table_view_count select {
+    width: 80px;
+}
+.table_view_count label{ margin: 8px 5px 0px 0px;}
+#city_selection,
+#region_selection{ display: none;}
+.current_sorting{ background-color: #E7E7E7;}
+.sort_type0{ text-decoration: underline !important;}
+.sort_type1{ text-decoration: overline !important;}

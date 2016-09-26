@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Api.BL.Account_BL" CodeBehind="Bl\Account_BL.cs"%>

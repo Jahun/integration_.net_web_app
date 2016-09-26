@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration", "Integration\Integration.csproj", "{AEFD5D9A-BCC0-4C65-9901-296C7288B369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{4F9C5147-9D40-4498-A15D-8DBBCCAC3DC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEFD5D9A-BCC0-4C65-9901-296C7288B369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFD5D9A-BCC0-4C65-9901-296C7288B369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFD5D9A-BCC0-4C65-9901-296C7288B369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFD5D9A-BCC0-4C65-9901-296C7288B369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F9C5147-9D40-4498-A15D-8DBBCCAC3DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F9C5147-9D40-4498-A15D-8DBBCCAC3DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F9C5147-9D40-4498-A15D-8DBBCCAC3DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F9C5147-9D40-4498-A15D-8DBBCCAC3DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

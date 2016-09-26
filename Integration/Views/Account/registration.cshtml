@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Registration Form</title>
+    <link href="~/assets/img/icon.png" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/login_css")
+    @Scripts.Render("~/registration_js")
+</head>
+<body>
+    <section class="container">
+        <div class="login">
+            <h1>Registration for Web App</h1>
+            <label id="message">@Html.Raw(ViewBag.message)</label>
+
+                @using (@Html.BeginForm("setregistration", "account", FormMethod.Post))
+                {
+                   
+                    <p><input type="text" name="name" value="@Request["name"]" placeholder="Name">
+                    </p>
+                    <p><input type="text" name="email" value="@Request["email"]" placeholder="Email">
+                    </p>
+                    <p><input type="password" name="password" value="@Request["password"]" placeholder="Password">
+                    </p>
+                    <p><input type="password" name="retype_password" value="@Request["retype_password"]" placeholder="Retype Password">
+                    </p>
+                    <p><a href="login" class="_link">Login</a>
+                    </p>
+                    <p class="submit"><input type="submit" name="register" value="Register">
+                    </p>
+                    @Html.AntiForgeryToken()
+                }
+            
+        </div>
+
+    </section>
+
+</body>
+</html>
+
+

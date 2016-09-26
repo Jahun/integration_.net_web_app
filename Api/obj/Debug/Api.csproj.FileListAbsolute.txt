@@ -1,0 +1,9 @@
+D:\Cloud\Works\Web\Asp.Net\Integration\Api\bin\Api.dll.config
+D:\Cloud\Works\Web\Asp.Net\Integration\Api\bin\Api.dll
+D:\Cloud\Works\Web\Asp.Net\Integration\Api\bin\Api.pdb
+D:\Cloud\Works\Web\Asp.Net\Integration\Api\obj\Debug\Api.dll
+D:\Cloud\Works\Web\Asp.Net\Integration\Api\obj\Debug\Api.pdb
+D:\Cloud\Works\Web Projects\Asp.NetApps\Integration\Api\bin\Api.dll
+D:\Cloud\Works\Web Projects\Asp.NetApps\Integration\Api\bin\Api.pdb
+D:\Cloud\Works\Web Projects\Asp.NetApps\Integration\Api\obj\Debug\Api.dll
+D:\Cloud\Works\Web Projects\Asp.NetApps\Integration\Api\obj\Debug\Api.pdb

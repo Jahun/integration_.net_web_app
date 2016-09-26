@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="~/assets/img/icon.png" rel="shortcut icon" type="image/x-icon" />
+    <title>Login Form</title>
+    @Styles.Render("~/login_css")
+</head>
+<body>
+<section class="container">
+    <div class="login">
+        <h1>Login to Web App</h1>
+        <label id="message">@Html.Raw(ViewBag.message)</label>
+       
+            @using (@Html.BeginForm("setlogin","account",FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <p><input type="text" name="email" value="" placeholder="Email">
+                </p>
+                <p><input type="password" name="password" value="" placeholder="Password">
+                </p>
+                <p><a href="registration" class="_link">Registration</a>
+                </p>
+                <p class="submit"><input type="submit" name="commit" value="Login">
+                </p>
+            }
+       
+    </div>
+
+</section>
+
+</body>
+</html>
+
+
